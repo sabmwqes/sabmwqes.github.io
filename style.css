@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    background-color: #000000;
+    color: #e0ffff;
+}
+
+.skyblue {color: #1DA1F2}
+.red {color: #c22}
+
+:root{
+    --bg-color: rgb(0, 0, 0);
+    --card-color: rgb(32, 32, 32);
+}
+
+.name-logo *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(90deg, #000028, #001000, #001010, #000028, #001000, #001010);
+    background-size: 250%;
+    animation: logobackground 10s linear infinite;
+
+}
+
+@keyframes logobackground{
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.my-name{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 840px;
+    width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    height: 200px;
+    width: 260px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 200ms 0s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.card *{
+    background-color: rgba(255, 255, 255, 0); /*透明*/
+}
+
+.card a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
