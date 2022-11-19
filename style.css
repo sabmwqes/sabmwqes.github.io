@@ -8,6 +8,10 @@
 
 .skyblue {color: #1DA1F2}
 .red {color: #c22}
+.lightblue {color: #8ff}
+.green {color: #0d0}
+.orange {color: #f80}
+.yellow {color: #ee0}
 
 :root{
     --bg-color: rgb(0, 0, 0);
@@ -44,6 +48,12 @@ body{
 .my-name{
     font-size: 50px;
     font-weight: 800;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 20px auto;
 }
 
 .cards{
