@@ -14,6 +14,10 @@
     --card-color: rgb(32, 32, 32);
 }
 
+body{
+    font-family: 'Inter', sans-serif;
+}
+
 .name-logo *{
     display: flex;
     justify-content: center;
@@ -22,7 +26,7 @@
 
     width: 100%;
     height: 300px;
-    background: linear-gradient(90deg, #000028, #001000, #001010, #000028, #001000, #001010);
+    background: linear-gradient(90deg, #000040, #002000, #002020, #000040, #002000, #002020);
     background-size: 250%;
     animation: logobackground 10s linear infinite;
 
@@ -55,7 +59,7 @@
 
 .card{
     background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
     height: 200px;
     width: 260px;
     border-radius: 8px;
