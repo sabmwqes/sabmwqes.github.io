@@ -1,42 +1,34 @@
 *{
     margin: 0;
     padding: 0;
-
-    background-color: #000000;
-    color: #e0ffff;
 }
-
-.skyblue {color: #1DA1F2}
-.red {color: #c22}
-.lightblue {color: #8ff}
-.green {color: #0d0}
-.orange {color: #f80}
-.yellow {color: #ee0}
 
 :root{
     --bg-color: rgb(0, 0, 0);
     --card-color: rgb(32, 32, 32);
+    --card-height: 200px;
+    --card-width: 260px;
 }
 
 body{
     font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #e0ffff;
 }
 
-.name-logo *{
+.name-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-
     width: 100%;
     height: 300px;
     background: linear-gradient(90deg, #000040, #002000, #002020, #000040, #002000, #002020);
     background-size: 250%;
-    animation: logobackground 10s linear infinite;
-
+    animation: BGgradient 10s linear infinite;
 }
 
-@keyframes logobackground{
+@keyframes BGgradient{
     0% {
         background-position: 0% 0%;
     }
@@ -53,7 +45,7 @@ body{
 h1{
     display: flex;
     justify-content: center;
-    margin: 50px auto 20px auto;
+    margin: 60px auto 15px auto;
 }
 
 .cards{
@@ -86,10 +78,6 @@ h1{
     background-color: rgba(255, 255, 255, 0.07);
 }
 
-.card *{
-    background-color: rgba(255, 255, 255, 0); /*透明*/
-}
-
 .card a{
     display: block;
     position: absolute;
@@ -98,3 +86,34 @@ h1{
     width: 100%;
     height: 100%;
 }
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    background: linear-gradient(90deg, #000040, #002000, #002020, #000040, #002000, #002020);
+    background-size: 250%;
+    animation: BGgradient 10s linear infinite;
+    animation-direction: reverse;
+    position: relative;
+}
+
+footer a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.skyblue {color: #1DA1F2}
+.red {color: #c22}
+.lightblue {color: #8ff}
+.green {color: #0d0}
+.orange {color: #f80}
+.yellow {color: #ee0}
+.darkblue {color: #33e} /* for icons */
