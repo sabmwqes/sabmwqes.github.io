@@ -1,6 +1,5 @@
-import './style.css';
-import * as THREE from 'three';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import * as THREE from './three.module.js';
+// import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
 
@@ -19,14 +18,14 @@ camera.position.setZ(30);
 renderer.render(scene, camera);
 
 const geometry = new THREE.IcosahedronGeometry(7, 0);
-const material = new THREE.MeshStandardMaterial( { color: 0x222222 } );
+const material = new THREE.MeshStandardMaterial( { color: 0xffffff } );
 const icosahedron = new THREE.Mesh(geometry, material);
 
 scene.add(icosahedron);
 
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(0, 0, 8);
-const ambientLight = new THREE.AmbientLight(0xffffff);
+const pointLight = new THREE.PointLight(0xffffff, 12);
+pointLight.position.set(0, 0, 12);
+const ambientLight = new THREE.AmbientLight(0x333333);
 scene.add(pointLight, ambientLight);
 
 // const lightHelper = new THREE.PointLightHelper(pointLight);
