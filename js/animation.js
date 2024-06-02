@@ -1,8 +1,8 @@
 window.onload = function() { // h1を読み込むまで待つ
     
-    const letters = "ABCDEFGHIJKLMNOPWQRSTUVWXYZ";
+    const letters = "ABCDEFGHKMNOPRSTXZ";
 
-    const objects = document.querySelectorAll("h1");
+    const objects = document.querySelectorAll(".srcumble-text");
     
     let intervals = Array(objects.length).fill(null);
     
@@ -19,7 +19,7 @@ window.onload = function() { // h1を読み込むまで待つ
                 return target.dataset.value[index];
                 }
             
-                return letters[Math.floor(Math.random() * 26)]
+                return letters[Math.floor(Math.random() * letters.length)]
             })
             .join("");
             
@@ -27,8 +27,8 @@ window.onload = function() { // h1を読み込むまで待つ
                 clearInterval(intervals);
             }
             
-            iteration += 1 / 2; //文字列が確定していく速さ
-            }, 30); //スクランブル間隔30ms
+            iteration += 1 / 5; //文字列が確定していく速さ
+            }, 30); //スクランブル間隔(ms)
     }
 
 
