@@ -1,7 +1,12 @@
+body{
+    --head-iteration: 5;
+    --tail-iteration: 5;
+}
+
 .parent-coin{
-    height: 100px;
-    width: 100px;
-    margin: 7.5px;
+    height: 80px;
+    width: 80px;
+    margin: 9px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -10,8 +15,8 @@
 
 .coin{
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -22,15 +27,22 @@
 
 .coin-head{
     background-color: #bb4;
-
     transform: rotateY(-90deg);
     animation: coin-head 5s linear infinite;
 }
 
 .coin-tail{
     background-color: #9aa;
-
+    transform: rotateY(90deg);
     animation: coin-tail 5s linear infinite;
+}
+
+#coinflip:hover .coin-head{
+    animation: coin-head-flipping 0.5s linear 0s var(--head-iteration) normal forwards;
+}
+
+#coinflip:hover .coin-tail{
+    animation: coin-tail-flipping 0.5s linear 0s var(--tail-iteration) normal forwards;
 }
 
 @keyframes coin-head {
@@ -46,6 +58,30 @@
 }
 
 @keyframes coin-tail {
+    0%{
+        transform: rotateY(-90deg);
+    }
+    50%{
+        transform: rotateY(-90deg);
+    }
+    100%{
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes coin-head-flipping {
+    0%{
+        transform: rotateY(-90deg);
+    }
+    50%{
+        transform: rotateY(90deg);
+    }
+    100%{
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes coin-tail-flipping {
     0%{
         transform: rotateY(-90deg);
     }

@@ -1,4 +1,4 @@
-window.onload = function() { // h1を読み込むまで待つ
+window.onload = function() { // DOM読み込むまで待つ
     
     const letters = "ABCDEFGHKMNOPRSTXZ";
 
