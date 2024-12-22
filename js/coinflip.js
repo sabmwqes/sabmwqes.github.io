@@ -9,3 +9,4 @@ const flip_coin = function() {
 }
 
 coinflip.addEventListener("mouseenter", flip_coin);
+coinflip.addEventListener("touchstart", flip_coin);
