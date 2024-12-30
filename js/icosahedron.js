@@ -6,7 +6,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 const renderer = new THREE.WebGL1Renderer({
-  canvas: document.querySelector('#bg'),
+  canvas: document.querySelector('#icosahedron'),
   alpha: true
 });
 
@@ -23,10 +23,12 @@ const icosahedron = new THREE.Mesh(geometry, material);
 
 scene.add(icosahedron);
 
-const pointLight = new THREE.PointLight(0xffffff, 12);
-pointLight.position.set(0, 0, 12);
-const ambientLight = new THREE.AmbientLight(0x333333);
-scene.add(pointLight, ambientLight);
+const greenLight = new THREE.PointLight(0x00ff00, 40);
+const blueLight = new THREE.PointLight(0x0000ff, 50);
+greenLight.position.set(-10, -10, 10);
+blueLight.position.set(10, 10, 10);
+const ambientLight = new THREE.AmbientLight(0x002222);
+scene.add(greenLight, blueLight, ambientLight);
 
 // const lightHelper = new THREE.PointLightHelper(pointLight);
 // const gridHelper = new THREE.GridHelper(200, 50);
