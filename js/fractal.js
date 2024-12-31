@@ -32,7 +32,7 @@ void main() {
 
     float blue = 0.5 * sin(u_time * 3.1) + 1.0;
     float green = 0.5 * cos(u_time * 3.1) + 1.0;
-    vec3 color = iterations / 400.0 * vec3(0.0, green, blue);
+    vec3 color = (iterations - 5.0) * vec3(0.0, green, blue) / 320.0;
     gl_FragColor = vec4(color, 1.0);
 }
 `;
