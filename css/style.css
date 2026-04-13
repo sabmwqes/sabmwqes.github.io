@@ -159,8 +159,8 @@ footer a{
 @keyframes notepad-color {
   0%, 16.65%     { filter: saturate(0) brightness(1.5); } /* gray */
   16.66%, 33.32% { filter: hue-rotate(120deg); }          /* green */
-  33.33%, 49.99% { filter: hue-rotate(220deg); }          /* blue */
-  50%, 66.65%    { filter: hue-rotate(280deg); }          /* purple */
+  33.33%, 49.99% { filter: hue-rotate(200deg); }          /* blue */
+  50%, 66.65%    { filter: hue-rotate(260deg); }          /* purple */
   66.66%, 83.32% { filter: hue-rotate(55deg) saturate(2); } /* yellow */
   83.33%, 100%   { filter: hue-rotate(310deg); }          /* magenta */
 }
