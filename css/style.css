@@ -164,6 +164,21 @@ footer a{
   83.33%, 100%   { filter: hue-rotate(310deg); }          /* magenta */
 }
 
+/* Daily Fractal image */
+.fractal-thumb {
+  border-radius: 6px;
+  animation: fractal-glow 6s linear infinite;
+}
+@keyframes fractal-glow {
+  0%   { box-shadow: 0 0 0 2px #f66, 0 0 8px 1px #f664; }
+  17%  { box-shadow: 0 0 0 2px #fa0, 0 0 8px 1px #fa04; }
+  33%  { box-shadow: 0 0 0 2px #cf0, 0 0 8px 1px #cf04; }
+  50%  { box-shadow: 0 0 0 2px #0cf, 0 0 8px 1px #0cf4; }
+  67%  { box-shadow: 0 0 0 2px #66f, 0 0 8px 1px #66f4; }
+  83%  { box-shadow: 0 0 0 2px #f0c, 0 0 8px 1px #f0c4; }
+  100% { box-shadow: 0 0 0 2px #f66, 0 0 8px 1px #f664; }
+}
+
 /* ── Mobile responsive ── */
 @media (max-width: 600px) {
   /* Header shrink */
