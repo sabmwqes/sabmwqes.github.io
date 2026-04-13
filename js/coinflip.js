@@ -1,12 +1,22 @@
 const coinflip = document.getElementById("coinflip");
-let duration = -1;
+const parentCoin = coinflip.querySelector(".parent-coin");
+let currentRotation = 0;
+let isFlipping = false;
 
-const flip_coin = function() {
+function flip() {
+    if (isFlipping) return;
+    isFlipping = true;
 
-    duration = 1.25 + Math.floor(Math.random() * 6) / 2 ;
-    document.body.style.setProperty("--head-iteration", `${duration}`);
-    document.body.style.setProperty("--tail-iteration", `${duration}`);
+    // 3~8 half-turns → lands randomly on head or tail
+    const halfTurns = 3 + Math.floor(Math.random() * 6);
+    currentRotation += halfTurns * 180;
+
+    const duration = 0.15 * halfTurns;
+    parentCoin.style.transition = `transform ${duration}s ease-out`;
+    parentCoin.style.transform = `rotateY(${currentRotation}deg)`;
+
+    setTimeout(() => { isFlipping = false; }, duration * 1000);
 }
 
-coinflip.addEventListener("mouseenter", flip_coin);
-coinflip.addEventListener("touchstart", flip_coin);
+coinflip.addEventListener("mouseenter", flip);
+coinflip.addEventListener("touchstart", flip);
