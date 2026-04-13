@@ -150,3 +150,41 @@ footer a{
 .orange {color: #f80}
 .yellow {color: #ee0}
 .darkblue {color: #22f} /* for icons */
+
+/* ── Mobile responsive ── */
+@media (max-width: 600px) {
+  /* Header shrink */
+  .name-logo {
+    height: 160px;
+    margin-bottom: 24px;
+  }
+  .my-name {
+    font-size: 32px;
+  }
+
+  /* Section title spacing */
+  h1 {
+    margin: 32px 0 8px 0;
+    font-size: 22px;
+  }
+
+  /* Cards: 2-column, aspect ratio preserved (260:200 = 13:10) */
+  .cards {
+    gap: 8px;
+    max-width: 100%;
+    width: calc(100% - 16px);
+  }
+  .card {
+    width: calc(40% - 4px);
+    height: auto;
+    aspect-ratio: 13 / 10;
+    font-size: clamp(10px, 3vw, 16px);
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 48px;
+    height: 72px;
+    font-size: 14px;
+  }
+}
